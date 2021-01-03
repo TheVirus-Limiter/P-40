@@ -66,12 +66,25 @@ class Game{
                     
                          textSize(25);
                          fill("white");
-                         text("Player 1 :" +allPlayers.player1.score,50,50);
-                        text("Player 2 :" + allPlayers.player2.score, 50, 100);
+                         text("Player 1:" +allPlayers.player1.score,50,50);
+                        text("Player 2:" + allPlayers.player2.score, 50, 100);
                  
+
+                        if(allPlayers.player2.score > allPlayers.player1.score){
+                            textSize(25);
+                            fill("white");
+                            text("Player 2 is in first place!", 50,200)
+                         }
+                         if(allPlayers.player1.score > allPlayers.player2.score){
+                            textSize(25);
+                            fill("white");
+                            text("Player 1 is in first place!", 50,200)
+                         }
+                         
                  }
                 
                 
+                 
                  
 
                 if (keyIsDown(RIGHT_ARROW) && player.index !== null) {
